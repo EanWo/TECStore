@@ -1,0 +1,6 @@
+PREFIX lubm: http://swat.cse.lehigh.edu/onto/univ-bench.owl#
+SELECT ?a WHERE{
+(?a lubm:hold ?y) ?s ?e.
+}
+FILTER(BEFORE
+(?s,?e,2016-08-09T11:11:00, 2018-08-09T11:11:00))

@@ -1,0 +1,7 @@
+PREFIX lubm: http://swat.cse.lehigh.edu/onto/univ-bench.owl#
+SELECT ?a ?bWHERE{
+(?a lubm:invest ?b) ?s1 ?e1.
+(?b lubm:invest ?c) ?s2 ?e2.
+}
+FILTER(EQUALS
+(?s1,?e1,2001-07-29T04:39:35,2006-09-10T04:39:35)&&BEFORE(?s2,?e2,2017-08-09T11:11:00, 2020-08-09T11:11:00))

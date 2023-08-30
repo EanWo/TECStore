@@ -1,0 +1,7 @@
+PREFIX yago: http://yago-knowledge.org/resource/
+SELECT ?a WHERE{
+(?a yago:isCitizenOf ?y) ?s ?e.
+}
+FILTER(OVERLAPS
+(?s,?e, 2010-11-15T00:54:18, 2016-11-15T00:54:18))
+

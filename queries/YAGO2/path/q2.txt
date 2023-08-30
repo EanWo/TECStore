@@ -1,0 +1,8 @@
+SELECT ?a ?b ?c WHERE{
+(?a yago:isLeaderOf ?b) ?s1 ?e1.
+(?b yago:isCitizenOf ?c) ?s2 ?e2.
+(?b yago:LocatedIn ?c) ?s3 ?e3.
+}
+FILTER(EQUALS
+(?s1,?e1,2001-07-29T04:39:35,2006-09-10T04:39:35)&& BEFORE(?s2,?e2,2017-08-09T11:11:00, 2020-08-09T11:11:00) && re－BEFORE(?s2,?e2,2007-08-09T11:11:00, 2010-08-09T11:11:00))
+

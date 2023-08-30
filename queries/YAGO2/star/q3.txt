@@ -1,0 +1,11 @@
+PREFIX yago: http://yago-knowledge.org/resource/
+SELECT ?a WHERE{
+?a yago:isLeaderOf ?b
+(?a yago:isCitizenOf ?c) ?s1 ?e1.
+(?a yago:isLocatedIn ?d) ?s2 ?e2.
+?a yago:hasSuccessor ?e.
+}
+FILTER(FINISHS
+(?s1,?e1, 2004-06-15T20:26:41,2006-01-02T20:26:41)&& BEFORE
+(?s2,?e2, 2019-11-15T00:54:18, 2020-07-10T00:00:00))
+

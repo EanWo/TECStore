@@ -1,0 +1,6 @@
+PREFIX lubm: http://swat.cse.lehigh.edu/onto/univ-bench.owl#
+SELECT ?a WHERE{
+(?a lubm:hold ?y) ?s ?e.
+}
+FILTER(OVERLAPS
+(?s,?e, 2010-11-15T00:54:18, 2016-11-15T00:54:18))

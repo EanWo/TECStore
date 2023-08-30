@@ -1,0 +1,11 @@
+PREFIX lubm: http://swat.cse.lehigh.edu/onto/univ-bench.owl#
+SELECT ?a WHERE{
+(?a rdf:type ?b).
+(?a lubm:hold ?c) ?s1 ?e1.
+(?a lubm:invest ?d) ?s2 ?e2.
+?a lubm:local ?e.
+?a lubm:email ?f.
+}
+FILTER(MEETS
+(?s1,?e1,2001-07-29T04:39:35,2013-02-18T23:59:40)&&BEFORE(?s2,?e2,2010-06-11T22:16:58,2013-10-22T22:16:58))
+

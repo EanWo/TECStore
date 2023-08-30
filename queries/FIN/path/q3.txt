@@ -1,0 +1,11 @@
+PREFIX fin: http://www.openkg.cn/finance#
+PREFIX rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+
+SELECT ?a ?b ?c ?d WHERE{
+(?a fin: shareHolding ?b) ?s1 ?e1.
+(?b fin: shareHolding ?c) ?s2 ?e2.
+(?c fin: shareHolding ?d) ?s3 ?e3.
+(?d fin: shareHolding ?e) ?s4 ?e4.
+}
+FILTER(BEFORE
+(?s1,?e1,2016-08-09T11:11:00, 2018-08-09T11:11:00)&& BEFORE(?s2,?e2,2017-08-09T11:11:00, 2020-08-09T11:11:00) && re－BEFORE(?s3,?e3,2007-08-09T11:11:00, 2010-08-09T11:11:00)&& OVERLAPS(?s4,?e4,2006-08-09T11:11:00, 2016-08-09T11:11:00))

@@ -1,0 +1,13 @@
+PREFIX lubm: http://swat.cse.lehigh.edu/onto/univ-bench.owl#
+SELECT ?a ?b ?c ?d ?e ?f ?g WHERE{
+(?a lubm:invest ?b) ?s1 ?e1.
+(?b lubm:invest ?c) ?s2 ?e2.
+(?c lubm:invest ?d) ?s3 ?e3.
+(?d lubm:invest ?e) ?s4 ?e4.
+(?e lubm:invest ?f) ?s5 ?e5.
+(?f lubm:invest ?g) ?s6 ?e6.
+(?g lubm:invest ?h) ?s7 ?e7.
+}
+FILTER(DURING
+(?s1,?e1,2006-04-28T01:01:12,2010-10-05T01:01:12)&&MEETS(?s2,?e2,2010-07-21T22:54:30,2020-12-08T22:54:30) && BEFORE(?s3,?e3,2019-01-18T06:43:51,2020-05-03T06:43:51)&&DURING(?s4,?e4,2010-07-21T22:54:30,2020-12-08T22:54:30) && re－BEFORE(?s5,?e5,2009-01-18T06:43:51,2011-05-03T06:43:51) && BEFORE(?s6,?e6,2019-01-18T06:43:51,2021-05-03T06:43:51)&&EQUALS(?s7,?e7,2013-05-15T21:02:31,2018-09-16T21:02:31))
+

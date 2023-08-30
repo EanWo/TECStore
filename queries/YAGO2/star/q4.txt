@@ -1,0 +1,12 @@
+PREFIX yago: http://yago-knowledge.org/resource/
+SELECT ?a WHERE{
+?a yago:isLeaderOf ?b
+(?a yago:isCitizenOf ?c) ?s1 ?e1.
+(?a yago:isLocatedIn ?d) ?s2 ?e2.
+?a yago:hasSuccessor ?e.
+?a yago:hasPredecessor ?f.
+}
+FILTER(STARTS
+(?s1,?e1, 2014-05-14T11:54:05,2018-08-06T11:54:05)&& DURING
+(?s2,?e2, 2009-12-01T02:10:25,2015-11-10T02:10:25))
+

@@ -1,0 +1,9 @@
+PREFIX fin: http://www.openkg.cn/finance#
+PREFIX rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+
+SELECT ?a WHERE{
+?a rdf:type ?b
+(?a fin: shareHolding ?c) ?s1 ?e1.
+}
+FILTER(EQUALS
+(?s1,?e1, 2015-11-15T00:54:18, 2018-07-10T00:00:00))

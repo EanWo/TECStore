@@ -1,0 +1,6 @@
+PREFIX yago: http://yago-knowledge.org/resource/
+SELECT ?a WHERE{
+(?a yago:isCitizenOf ?y) ?s ?e.
+}
+FILTER(MEETS
+(?s,?e,2010-08-15T00:00:00, 2011-11-07T09:54:05))

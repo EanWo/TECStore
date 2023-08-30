@@ -1,0 +1,7 @@
+PREFIX lubm: http://swat.cse.lehigh.edu/onto/univ-bench.owl#
+SELECT ?a WHERE{
+(?a lubm:hold ?b) ?s1 ?e1.
+?a lubm:invest ?c.
+}
+FILTER(EQUALS
+(?s1,?e1, 2013-02-18T23:59:40,2014-02-13T23:59:40))
